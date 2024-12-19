@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div class="login">
+            <h1>FWI Prediction</h1>
+            <form action="{{ url_for('predict_data')}}" method="post">
+                <input type="text" name="Temprature" placeholder="Temprature" id="required" /><br>
+                <input type="text" name="RH" placeholder="RH" id="required" /><br>
+                <input type="text" name="Ws" placeholder="Ws" id="required" /><br>
+                <input type="text" name="Rain" placeholder="Rain" id="required" /><br>
+                <input type="text" name="FFMC" placeholder="FFMC" id="required" /><br>
+                <input type="text" name="DMC" placeholder="DMC" id="required" /><br>
+                <input type="text" name="ISI" placeholder="ISI" id="required" /><br>
+                <input type="text" name="Classes" placeholder="Classes" id="required" /><br>
+                <input type="text" name="region" placeholder="region" id="required" /><br>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            <h2>The FWI should be {{ result }}</h2>
+        </div>
+    </body>
+</html>
